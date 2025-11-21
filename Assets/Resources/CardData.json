@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": "phenix_001",
+      "name": "不死鳥",
+      "hp": 120,
+      "attack": 35,
+      "defense": 20,
+      "imagekey":"phenix"
+    }
+  ],
+
+  "attack":[
+    {
+        "id": "fire_001",
+        "name":"火炎放射",
+        "attack_rate":1.2,
+        "attribute":"fire"
+    }
+  ],
+
+  "buff":[
+    {
+        "id":"attack_buff_001",
+        "name":"攻撃力バフ",
+        "add_attack": 30
+    },
+    {
+        "id":"defense_buff_001",
+        "name":"防御力バフ",
+        "add_defense": 15
+    },
+    {
+        "id":"heal_buff_001",
+        "name":"回復",
+        "add_HP": 20
+    }
+  ]
+}

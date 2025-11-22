@@ -1,243 +1,292 @@
 using UnityEngine;
-using System.Collections;
 using TMPro;
 
 public class BattleManager : MonoBehaviour
 {
-    [Header("データベース読み込み")]
-    public CardDataLoader dataLoader;   // CardDataLoader をアタッチ
+    [Header("参照")]
+    public CardDataLoader dataLoader;
+    public ARCardInput arCardInput; // ターン終了時にフラグをリセットするために必要
 
-    // バトル中のキャラ
-    private BattleCharacter player;
-    private BattleCharacter enemy;
+    [Header("UI")]
+    public TextMeshProUGUI player1HpText;
+    public TextMeshProUGUI player2HpText;
+    public TextMeshProUGUI infoText; // ターン情報などを表示
 
-    // 先攻・後攻
-    private bool isPlayerTurn = true;
+    [Header("プレハブ")]
+    public GameObject player1Prefab; // Player1用の生成モデル
+    public GameObject player2Prefab; // Player2用の生成モデル
 
-    // UI への参照
-    public TextMeshProUGUI playerHpText;
-    public TextMeshProUGUI enemyHpText;
+    // バトル中のステータス管理
+    private BattleCharacter player1;
+    private BattleCharacter player2;
+
+    // 生成されたオブジェクトの管理
+    private GameObject player1GO;
+    private GameObject player2GO;
+
+    // 状態フラグ
+    public bool Player1Set { get; private set; } = false;
+    public bool Player2Set { get; private set; } = false;
+    public bool Player1Acted { get; private set; } = false;
+    public bool Player2Acted { get; private set; } = false;
+
+    private bool isBattleOver = false;
+
+    private int turnNumber = 1;
 
     void Start()
     {
-        // テスト用に同じキャラで戦わせる
-        SetupBattle("phenix_001", "phenix_001");
-
-        // オートバトル開始（コンソールでログ確認用）
-        StartCoroutine(AutoBattleTest());
-
+        UpdateUI("Scan cards to summon characters.");
     }
 
-    //HPのUI更新
-    void UpdateHpUI()
+    // ============================================================
+    // キャラクター召喚
+    // ============================================================
+    public void SetPlayer1Card(string id, Vector3 pos, Quaternion rot)
     {
-        if (player != null && enemy != null)
-        {
-            playerHpText.text = $"Player HP: {player.currentHp}";
-            enemyHpText.text = $"Enemy HP: {enemy.currentHp}";
-        }
-    }
+        if (Player1Set) return; // すでに召喚済みなら無視
 
-    /// バトル開始時に呼ぶ：プレイヤー・敵キャラをセット
-    public void SetupBattle(string playerCharId, string enemyCharId)
-    {
-        var pData = dataLoader.GetCharacterById(playerCharId);
-        var eData = dataLoader.GetCharacterById(enemyCharId);
+        var data = dataLoader.GetCharacterById(id);
+        if (data == null) return;
 
-        if (pData == null || eData == null)
-        {
-            Debug.LogError("キャラIDが見つかりません．player:" + playerCharId + " enemy:" + enemyCharId);
-            return;
-        }
+        player1 = new BattleCharacter(data);
+        Player1Set = true;
 
-        player = new BattleCharacter(pData);
-        enemy = new BattleCharacter(eData);
-
-        // 先攻はとりあえずプレイヤーにしておく
-        isPlayerTurn = true;
-
-        Debug.Log($"バトル開始！ プレイヤー:{player.data.name} HP:{player.currentHp} vs 敵:{enemy.data.name} HP:{enemy.currentHp}");
-
+        // モデル生成
+        if (player1Prefab != null)
+            player1GO = Instantiate(player1Prefab, pos, rot);
+        
+        UpdateUI("P1 SUMMONEDED");
         UpdateHpUI();
     }
 
-    IEnumerator AutoBattleTest()
+    public void SetPlayer2Card(string id, Vector3 pos, Quaternion rot)
     {
-        // 両方生きている間は交互に殴り合う
-        while (!player.IsDead && !enemy.IsDead)
-        {
-            if (isPlayerTurn)
-            {
-                // プレイヤーのターン
-                PlayerUseAttack("fire_001");  // 攻撃カードIDはお好みで
-            }
-            else
-            {
-                // 敵のターン
-                EnemyUseAttack("fire_001");
-            }
+        if (Player2Set) return;
 
-            // 1秒待ってから次のターンへ（速くしたければ0.5fとかに）
-            yield return new WaitForSeconds(1f);
+        var data = dataLoader.GetCharacterById(id);
+        if (data == null) return;
+
+        player2 = new BattleCharacter(data);
+        Player2Set = true;
+
+        if (player2Prefab != null)
+            player2GO = Instantiate(player2Prefab, pos, rot);
+
+        UpdateUI("P2 SUMMONDED");
+        UpdateHpUI();
+    }
+
+    // ============================================================
+    // 攻撃アクション
+    // ============================================================
+    public void Player1UseAttack(string key)
+    {
+        if (!CanAct(isPlayer1: true)) return;
+
+        var atk = dataLoader.GetAttackById(key);
+        if (atk == null) return;
+
+        DoAttack(player1, player2, atk);
+        Player1Acted = true;
+        UpdateUI($"P1 ATTACK:{atk.name}");
+        CheckEndOfTurn();
+    }
+
+    public void Player2UseAttack(string key)
+    {
+        if (!CanAct(isPlayer1: false)) return;
+
+        var atk = dataLoader.GetAttackById(key);
+        if (atk == null) return;
+
+        DoAttack(player2, player1, atk);
+        Player2Acted = true;
+        UpdateUI($"P2 Attack: {atk.name}");
+        CheckEndOfTurn();
+    }
+
+    // ============================================================
+    // バフアクション
+    // ============================================================
+    public void Player1UseBuff(string key)
+    {
+        if (!CanAct(isPlayer1: true)) return;
+
+        var buff = dataLoader.GetBuffById(key);
+        if (buff == null) return;
+
+        ApplyBuff(player1, buff);
+        Player1Acted = true;
+        UpdateUI($"P1 BUFF: {buff.name}");
+        CheckEndOfTurn();
+    }
+
+    public void Player2UseBuff(string key)
+    {
+        if (!CanAct(isPlayer1: false)) return;
+
+        var buff = dataLoader.GetBuffById(key);
+        if (buff == null) return;
+
+        ApplyBuff(player2, buff);
+        Player2Acted = true;
+        UpdateUI($"P2 BUFF: {buff.name}");
+        CheckEndOfTurn();
+    }
+
+    // ============================================================
+    // 内部処理
+    // ============================================================
+    
+    // 行動可能かどうかの判定
+    private bool CanAct(bool isPlayer1)
+    {
+        //バトルが終わっていたら行動不可
+        if (isBattleOver) 
+        {
+            Debug.Log("バトルは終了しています");
+            return false; 
         }
 
-        // ここに来たときにはどちらかが死んでいる
-        if (player.IsDead && enemy.IsDead)
+        if (!Player1Set || !Player2Set) 
         {
-            Debug.Log("引き分け！（両者戦闘不能）");
+            // 戦闘開始前
+            return false;
         }
-        else if (player.IsDead)
+        
+        if (isPlayer1 && Player1Acted) return false; // すでに行動済み
+        if (!isPlayer1 && Player2Acted) return false;
+
+        return true;
+    }
+
+    // ============================================================
+    // ★変更箇所: 攻撃処理 (属性計算を追加)
+    // ============================================================
+    private void DoAttack(BattleCharacter attacker, BattleCharacter defender, AttackCardData atk)
+    {
+        // 1. 属性倍率を取得 (攻撃カードの属性 vs 防御キャラの属性)
+        float attributeMultiplier = GetAttributeMultiplier(atk.attribute, defender.data.attribute);
+
+        // 2. 攻撃力計算
+        // 基本攻撃力(バフ込み) × カード倍率
+        float basePower = attacker.currentAttack * atk.attack_rate;
+
+        // 3. 属性倍率を適用
+        float powerWithAttribute = basePower * attributeMultiplier;
+
+        // 4. 最終ダメージ計算 (防御力を引く)
+        // 数式: ( (Base ATK) * Attribute Multiplier ) - Enemy DEF
+        int damage = Mathf.Max(0, Mathf.RoundToInt(powerWithAttribute - defender.currentDefense));
+
+        // HP更新
+        defender.currentHp -= damage;
+        UpdateHpUI();
+
+        // 相手が死んだかチェック
+        if (defender.currentHp <= 0)
         {
-            Debug.Log("バトル終了：敵の勝ち");
+            // HPを0で止める（マイナス表示にならないように）
+            defender.currentHp = 0; 
+            UpdateHpUI();
+
+            // ゲーム終了処理へ (勝者は攻撃した側)
+            EndBattle(winnerName: attacker.data.owner); 
         }
         else
         {
-            Debug.Log("バトル終了：プレイヤーの勝ち");
+            // まだ生きているなら、効果抜群などのメッセージを出してターン継続
+            if (attributeMultiplier > 1.0f){
+                UpdateUI($"Super Effective! Dealt {damage} dmg！");
+            }
+            else{
+                UpdateUI($"{damage} dmg！");
+            }
+
+            // ターン終了判定へ
+            CheckEndOfTurn(); 
         }
+
+        // ログ表示 (デバッグ用)
+        string typeMsg = (attributeMultiplier > 1.0f) ? " <color=red>Super Efective!(x2)!</color>" : "";
+        Debug.Log($"Attack: {atk.name} (Attribute:{atk.attribute}) -> Defense: {defender.data.name} (Attribute:{defender.data.attribute})\n" +
+                  $"Rate: {attributeMultiplier}, Damage: {damage}{typeMsg}");
+        
+        if (attributeMultiplier > 1.0f) UpdateUI($"Super Effective！{damage} dmg！");
     }
 
-    /// プレイヤーが攻撃カードを使う（UIボタンやARから呼ぶ想定）
-    public void PlayerUseAttack(string attackCardId)
+    // 属性相性の判定ロジック
+    private float GetAttributeMultiplier(string attackAttr, string defenseAttr)
     {
-        if (!isPlayerTurn)
-        {
-            Debug.Log("今はプレイヤーのターンではありません．");
-            return;
-        }
+        // 属性有利の定義: 炎 > 草 > 水 > 炎 ...
+        if (attackAttr == "fire" && defenseAttr == "grass") return 2.0f;
+        if (attackAttr == "grass" && defenseAttr == "water") return 2.0f;
+        if (attackAttr == "water" && defenseAttr == "fire") return 2.0f;
 
-        var attackCard = dataLoader.GetAttackById(attackCardId);
-        if (attackCard == null)
-        {
-            Debug.LogError("攻撃カードが見つかりません: " + attackCardId);
-            return;
-        }
-
-        DoAttack(player, enemy, attackCard);
-
-        if (enemy.IsDead)
-        {
-            Debug.Log("敵を倒した！ プレイヤーの勝ち！");
-            return;
-        }
-
-        EndTurn();
-        // ここで敵ターンの処理（AI行動）につなげてもいい
+        // それ以外は等倍 (不利な場合の0.5倍などを入れたい場合はここに追記)
+        return 1.0f;
     }
 
-    /// <summary>
-    /// プレイヤーがバフカードを使う（UI/ARから呼ぶ）
-    /// </summary>
-    public void PlayerUseBuff(string buffCardId)
+    private void ApplyBuff(BattleCharacter target, BuffCardData buff)
     {
-        if (!isPlayerTurn)
-        {
-            Debug.Log("今はプレイヤーのターンではありません．");
-            return;
-        }
-
-        var buffCard = dataLoader.GetBuffById(buffCardId);
-        if (buffCard == null)
-        {
-            Debug.LogError("バフカードが見つかりません: " + buffCardId);
-            return;
-        }
-
-        ApplyBuff(player, buffCard);
-
-        EndTurn();
-    }
-
-    /// <summary>
-    /// 攻撃処理：自分の攻撃力 × 攻撃カード倍率 − 相手防御
-    /// </summary>
-    private void DoAttack(BattleCharacter attacker, BattleCharacter defender, AttackCardData attackCard)
-    {
-        // ダメージ計算
-        float raw = attacker.currentAttack * attackCard.attack_rate - defender.currentDefense;
-        int damage = Mathf.Max(0, Mathf.RoundToInt(raw));   // マイナスは0に
-
-        defender.currentHp -= damage;
-
+        target.currentAttack += buff.add_attack;
+        target.currentDefense += buff.add_defense;
+        target.currentHp += buff.add_HP;
         UpdateHpUI();
-
-        Debug.Log($"{attacker.data.name} の {attackCard.name}！ {defender.data.name} に {damage} ダメージ！ (残りHP {defender.currentHp})");
     }
 
-    /// <summary>
-    /// バフ処理
-    /// </summary>
-    private void ApplyBuff(BattleCharacter target, BuffCardData buffCard)
+    private void UpdateHpUI()
     {
-        bool hasBuff = false;
-
-        if (buffCard.add_attack != 0)
-        {
-            target.currentAttack += buffCard.add_attack;
-            Debug.Log($"{target.data.name} の攻撃力が {buffCard.add_attack} 上がった！ 現在攻撃力:{target.currentAttack}");
-            hasBuff = true;
-        }
-
-        if (buffCard.add_defense != 0)
-        {
-            target.currentDefense += buffCard.add_defense;
-            Debug.Log($"{target.data.name} の防御力が {buffCard.add_defense} 上がった！ 現在防御力:{target.currentDefense}");
-            hasBuff = true;
-        }
-
-        if (buffCard.add_HP != 0)
-        {
-            target.currentHp += buffCard.add_HP;
-            // 回復は最大HPを超えないようにしたければ↓
-            // target.currentHp = Mathf.Min(target.currentHp, target.data.hp);
-
-            Debug.Log($"{target.data.name} のHPが {buffCard.add_HP} 回復！ 現在HP:{target.currentHp}");
-            hasBuff = true;
-        }
-
-        UpdateHpUI();
-
-        if (!hasBuff)
-        {
-            Debug.LogWarning("このバフカードには効果値が設定されていません．");
-        }
+        if (player1 != null) player1HpText.text = $"P1 HP: {player1.currentHp}";
+        if (player2 != null) player2HpText.text = $"P2 HP: {player2.currentHp}";
     }
 
-    /// <summary>
-    /// ターン終了処理
-    /// </summary>
-    private void EndTurn()
+    private void UpdateUI(string msg)
     {
-        isPlayerTurn = !isPlayerTurn;
-        Debug.Log(isPlayerTurn ? "プレイヤーのターン" : "敵のターン");
-
-        // ここで敵AIの行動を呼ぶなど
-        // EnemyTurnAction();
+        if (infoText != null) infoText.text = msg;
+        Debug.Log(msg);
     }
 
-    // 敵ターンの例（とりあえず攻撃カード1枚固定で殴るなど）
-    public void EnemyUseAttack(string attackCardId)
+    // ターン終了判定
+    private void CheckEndOfTurn()
     {
-        if (isPlayerTurn)
+        if (isBattleOver) return;
+
+        if (Player1Acted && Player2Acted)
         {
-            Debug.Log("今は敵のターンではありません．");
-            return;
+            // 両者行動済みならターンリセット
+            Player1Acted = false;
+            Player2Acted = false;
+            turnNumber++;
+            
+            UpdateUI($"--- Turn {turnNumber} Start ---");
+
+            // ARCardInput側の「1フレーム1回制限」などのフラグもリセットさせる
+            if (arCardInput != null)
+            {
+                arCardInput.ResetActionFlag();
+            }
+        }
+        
+    }
+
+    //ゲーム終了処理
+    private void EndBattle(string winnerName)
+    {
+        isBattleOver = true;
+
+        string winMsg = "";
+        if (winnerName == "player1")
+        {
+            winMsg = "P1 WIN"; 
+        }
+        else
+        {
+            winMsg = "P2 WIN";
         }
 
-        var attackCard = dataLoader.GetAttackById(attackCardId);
-        if (attackCard == null)
-        {
-            Debug.LogError("攻撃カードが見つかりません: " + attackCardId);
-            return;
-        }
-
-        DoAttack(enemy, player, attackCard);
-
-        if (player.IsDead)
-        {
-            Debug.Log("プレイヤーは倒れた…… 敵の勝ち！");
-            return;
-        }
-
-        EndTurn();
+        UpdateUI(winMsg);
+        Debug.Log($"GameSet: Winner {winnerName}");
     }
 }

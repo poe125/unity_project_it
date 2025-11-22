@@ -18,12 +18,72 @@ MonoBehaviour:
     m_Storage: []
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 4899305923400287830
-      m_GuidHigh: 12406060767353232550
+      m_GuidLow: 4890122669804990363
+      m_GuidHigh: 151020871348802471
     m_SerializedTextureGuid:
-      m_GuidLow: 3203448076675255297
-      m_GuidHigh: 6444152543632517017
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: phenix_001
+      m_GuidLow: 4630999654405678283
+      m_GuidHigh: 14269836664384489512
+    m_Size: {x: 0.2, y: 0.2793651}
+    m_SpecifySize: 1
+    m_Name: character_fire_player1
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5634910153945385139
+      m_GuidHigh: 14033087890510408103
+    m_SerializedTextureGuid:
+      m_GuidLow: 17403162157580887037
+      m_GuidHigh: 10873831686475802763
+    m_Size: {x: 0.2, y: 0.2793651}
+    m_SpecifySize: 1
+    m_Name: character_grass_player2
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4826937539587172740
+      m_GuidHigh: 18407088698725121936
+    m_SerializedTextureGuid:
+      m_GuidLow: 15327129894587515508
+      m_GuidHigh: 3985050235664153946
+    m_Size: {x: 0.2, y: 0.2793651}
+    m_SpecifySize: 1
+    m_Name: attack_fire_player1
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5485131137528065514
+      m_GuidHigh: 8652025340886298782
+    m_SerializedTextureGuid:
+      m_GuidLow: 7130551543580049304
+      m_GuidHigh: 1779685148874514169
+    m_Size: {x: 0.2, y: 0.2793651}
+    m_SpecifySize: 1
+    m_Name: buff_fire_player1
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5262219905406200256
+      m_GuidHigh: 1340395353262940595
+    m_SerializedTextureGuid:
+      m_GuidLow: 2721373811124697822
+      m_GuidHigh: 1533125998528593899
+    m_Size: {x: 0.2, y: 0.2793651}
+    m_SpecifySize: 1
+    m_Name: attack_water_player2
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5247526254745266757
+      m_GuidHigh: 11698687865068158633
+    m_SerializedTextureGuid:
+      m_GuidLow: 6945729593028182485
+      m_GuidHigh: 1768555463116691480
+    m_Size: {x: 0.2, y: 0.2793651}
+    m_SpecifySize: 1
+    m_Name: buff_grass_player2
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5696862997879640990
+      m_GuidHigh: 1707520105430009482
+    m_SerializedTextureGuid:
+      m_GuidLow: 7333063151549037262
+      m_GuidHigh: 12908736344210656987
+    m_Size: {x: 0.2, y: 0.2793651}
+    m_SpecifySize: 1
+    m_Name: buff_water_marker_player1
     m_Texture: {fileID: 0}

@@ -1,0 +1,1 @@
+C:\Unity_works\unity_project_it\Library\Bee\artifacts\Android\il2cppOutput\cpp

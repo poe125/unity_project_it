@@ -397,6 +397,7 @@ GameObject:
   - component: {fileID: 537334046}
   - component: {fileID: 537334045}
   - component: {fileID: 537334051}
+  - component: {fileID: 537334052}
   m_Layer: 0
   m_Name: XR Origin (Mobile AR)
   m_TagString: Untagged
@@ -517,6 +518,25 @@ MonoBehaviour:
   trackedImageManager: {fileID: 537334045}
   battleManager: {fileID: 1681898422}
   dataLoader: {fileID: 422061208}
+--- !u!114 &537334052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537334043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07557813b58551046beb888b3625ac7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::show_multiple_image
+  prefabsToSpawn:
+  - {fileID: 2528525821958412056, guid: aafc72d1423cc8244b3f43abaf02c902, type: 3}
+  - {fileID: 3048605793812921144, guid: f4d9351194f8f29489926609476df6a0, type: 3}
+  - {fileID: 3928117046107258201, guid: 8ea8d7621304bbc48ad6950236a5b4ce, type: 3}
+  - {fileID: 6082643426392030971, guid: 84a95b6c694cb78459ee486502ab54fe, type: 3}
+  - {fileID: 7015095627438478245, guid: 1d42cf8de9cc8ec4994ba6b913909e2b, type: 3}
+  - {fileID: 7907798235835056802, guid: 5b8814178058b074180a3bc0f26cec9a, type: 3}
 --- !u!1 &554448517
 GameObject:
   m_ObjectHideFlags: 0

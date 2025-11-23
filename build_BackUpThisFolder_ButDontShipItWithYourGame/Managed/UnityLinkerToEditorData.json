@@ -9,6 +9,22 @@
         "name": "Animation",
         "dependencies": [
           {
+            "name": "Animation",
+            "scenes": [
+              "Assets/Scenes/ARGame.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "AnimationClip",
+            "scenes": [
+              "Assets/Scenes/ARGame.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "Animator",
             "scenes": [
               "Assets/Scenes/ARGame.unity"
@@ -26,6 +42,12 @@
             "name": "AnimatorOverrideController",
             "scenes": [],
             "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Motion",
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {

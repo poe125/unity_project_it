@@ -345,6 +345,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral0BC7C5801980AE591057F623889B06C0D7FD554C
 IL2CPP_EXTERN_C String_t* _stringLiteral0F52C788AC4796FE5841155F7DF3896E049C051E;
 IL2CPP_EXTERN_C String_t* _stringLiteral1614F21F590C92E77AE78E546E587F6095A2D56D;
 IL2CPP_EXTERN_C String_t* _stringLiteral1A4276BAD393F675DD233469B36E1CDDBF646C68;
+IL2CPP_EXTERN_C String_t* _stringLiteral216451B0B96E95A72109CC42B6C5D525882C74B8;
 IL2CPP_EXTERN_C String_t* _stringLiteral278DDA87522A9019A0147F14D54301096A99F2D1;
 IL2CPP_EXTERN_C String_t* _stringLiteral2FCE60B7EA93E6BA79CC41E5C50C1010BF335386;
 IL2CPP_EXTERN_C String_t* _stringLiteral323D3CF5D4D3A2522F2C83F50A1B36969D949EEF;
@@ -4086,6 +4087,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA8DBB4C2516B9723C5A4
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C (String_t* ___0_format, RuntimeObject* ___1_arg0, RuntimeObject* ___2_arg1, RuntimeObject* ___3_arg2, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_values, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARCardInput_ResetActionFlag_m8073A1ADC6823F620CAC79C72030E81C4BFEC2B0 (ARCardInput_tC7D9C2EBA757CD91EA0FE02851CB943958473EF8* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E (String_t* ___0_sceneName, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardDataLoader_Load_m1719F4E0AE8E1B8DACF8D7171F64DADEE89F457A (CardDataLoader_t95621B2DD026AA7CCD00D1204BE59F25F33A13CE* __this, const RuntimeMethod* method) ;
 inline TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* Resources_Load_TisTextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69_m55E770DF81AB6D40763121667DA5E743EF1036B2 (String_t* ___0_path, const RuntimeMethod* method)
 {
@@ -4098,7 +4100,6 @@ inline CardDatabase_t36225FD14A4FE80445872C3F5E40607185A6EF3E* JsonUtility_FromJ
 	return ((  CardDatabase_t36225FD14A4FE80445872C3F5E40607185A6EF3E* (*) (String_t*, const RuntimeMethod*))JsonUtility_FromJson_TisRuntimeObject_m0CCF0FE109BF4C85AECC9C5D0DBB43422A24FB40_gshared)(___0_json, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5 (int32_t* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E (String_t* ___0_sceneName, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865 (const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_Rotate_m2A308205498AFEEA3DF784B1C86E4F7C126CA2EE (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_eulers, const RuntimeMethod* method) ;
@@ -5659,7 +5660,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BattleCharacter_get_IsDead_m4F84300B7F6D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BattleManager_get_Player1Set_m64F3C2A173E0FE05B74B19E8D1A7A04E05B70728 (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:28>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:29>
 		bool L_0 = __this->___U3CPlayer1SetU3Ek__BackingField;
 		return L_0;
 	}
@@ -5668,7 +5669,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BattleManager_get_Player1Set_m64F3C2A173
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_set_Player1Set_mFECFEE78544765C8E987EE0007CE6F0B6DB8FD70 (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:28>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:29>
 		bool L_0 = ___0_value;
 		__this->___U3CPlayer1SetU3Ek__BackingField = L_0;
 		return;
@@ -5678,7 +5679,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_set_Player1Set_mFECFEE7854
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BattleManager_get_Player2Set_mF51D491D96CE597C73E52659260482E1E7A9EBE1 (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:29>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:30>
 		bool L_0 = __this->___U3CPlayer2SetU3Ek__BackingField;
 		return L_0;
 	}
@@ -5687,7 +5688,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BattleManager_get_Player2Set_mF51D491D96
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_set_Player2Set_mC8E2C53F0D239FC0D7C98939F0B0FC14032267A4 (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:29>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:30>
 		bool L_0 = ___0_value;
 		__this->___U3CPlayer2SetU3Ek__BackingField = L_0;
 		return;
@@ -5697,7 +5698,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_set_Player2Set_mC8E2C53F0D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BattleManager_get_Player1Acted_m663BE3406CE232D7579CD60BBEE2513CE0C0F7D9 (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:30>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:31>
 		bool L_0 = __this->___U3CPlayer1ActedU3Ek__BackingField;
 		return L_0;
 	}
@@ -5706,7 +5707,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BattleManager_get_Player1Acted_m663BE340
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_set_Player1Acted_mAF90DC8CC998A06018919E01DE4642A9B5F2180B (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:30>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:31>
 		bool L_0 = ___0_value;
 		__this->___U3CPlayer1ActedU3Ek__BackingField = L_0;
 		return;
@@ -5716,7 +5717,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_set_Player1Acted_mAF90DC8C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BattleManager_get_Player2Acted_mD4FC7E05B39F0D4D407EE889761B4B928A2C068F (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:31>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:32>
 		bool L_0 = __this->___U3CPlayer2ActedU3Ek__BackingField;
 		return L_0;
 	}
@@ -5725,7 +5726,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BattleManager_get_Player2Acted_mD4FC7E05
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_set_Player2Acted_m910F399C1D09AFD62324C4C9D84D4E8E7D8A9377 (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:31>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:32>
 		bool L_0 = ___0_value;
 		__this->___U3CPlayer2ActedU3Ek__BackingField = L_0;
 		return;
@@ -5741,9 +5742,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_Start_mA0DE3F51A70C3D57C96
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:39>
-		BattleManager_UpdateUI_m05A84DB18F9D0E75CAE305727C71BA45024E22A7(__this, _stringLiteral803C98460024FD5C7C728EEA8F3D54F976E07961, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:40>
+		BattleManager_UpdateUI_m05A84DB18F9D0E75CAE305727C71BA45024E22A7(__this, _stringLiteral803C98460024FD5C7C728EEA8F3D54F976E07961, NULL);
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:41>
 		return;
 	}
 }
@@ -5761,7 +5762,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_SetPlayer1Card_mC03C1B08A1
 	}
 	CharacterCardData_tBF56D8CEB59CC6C0256E7C8D4F1D57947C3986CF* V_0 = NULL;
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:47>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:48>
 		bool L_0;
 		L_0 = BattleManager_get_Player1Set_m64F3C2A173E0FE05B74B19E8D1A7A04E05B70728_inline(__this, NULL);
 		if (!L_0)
@@ -5770,20 +5771,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_SetPlayer1Card_mC03C1B08A1
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:47>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:48>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:49>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:50>
 		CardDataLoader_t95621B2DD026AA7CCD00D1204BE59F25F33A13CE* L_1 = __this->___dataLoader;
 		String_t* L_2 = ___0_id;
 		NullCheck(L_1);
 		CharacterCardData_tBF56D8CEB59CC6C0256E7C8D4F1D57947C3986CF* L_3;
 		L_3 = CardDataLoader_GetCharacterById_m819EF072169565240D56CBE95BF8B7A4614C33E4(L_1, L_2, NULL);
 		V_0 = L_3;
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:50>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:51>
 		CharacterCardData_tBF56D8CEB59CC6C0256E7C8D4F1D57947C3986CF* L_4 = V_0;
 		if (L_4)
 		{
@@ -5791,21 +5792,21 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:50>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:51>
 		return;
 	}
 
 IL_001a:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:52>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:53>
 		CharacterCardData_tBF56D8CEB59CC6C0256E7C8D4F1D57947C3986CF* L_5 = V_0;
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_6 = (BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7*)il2cpp_codegen_object_new(BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7_il2cpp_TypeInfo_var);
 		BattleCharacter__ctor_m1365351B91C0F6AE58866E0548E1E72BCC92C379(L_6, L_5, NULL);
 		__this->___player1 = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___player1), (void*)L_6);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:53>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:54>
 		BattleManager_set_Player1Set_mFECFEE78544765C8E987EE0007CE6F0B6DB8FD70_inline(__this, (bool)1, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:56>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:57>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = __this->___player1Prefab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_8;
@@ -5816,7 +5817,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:57>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:58>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = __this->___player1Prefab;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___1_pos;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_11 = ___2_rot;
@@ -5829,11 +5830,11 @@ IL_001a:
 
 IL_004e:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:59>
-		BattleManager_UpdateUI_m05A84DB18F9D0E75CAE305727C71BA45024E22A7(__this, _stringLiteralED7AD0B819E048F4394EA888CBDAADD68109DE40, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:60>
-		BattleManager_UpdateHpUI_mA24309773924E48DCC1821A34589D9E9C303E7E8(__this, NULL);
+		BattleManager_UpdateUI_m05A84DB18F9D0E75CAE305727C71BA45024E22A7(__this, _stringLiteralED7AD0B819E048F4394EA888CBDAADD68109DE40, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:61>
+		BattleManager_UpdateHpUI_mA24309773924E48DCC1821A34589D9E9C303E7E8(__this, NULL);
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:62>
 		return;
 	}
 }
@@ -5851,7 +5852,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_SetPlayer2Card_m671BFA8959
 	}
 	CharacterCardData_tBF56D8CEB59CC6C0256E7C8D4F1D57947C3986CF* V_0 = NULL;
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:65>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:66>
 		bool L_0;
 		L_0 = BattleManager_get_Player2Set_mF51D491D96CE597C73E52659260482E1E7A9EBE1_inline(__this, NULL);
 		if (!L_0)
@@ -5860,20 +5861,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_SetPlayer2Card_m671BFA8959
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:65>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:66>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:67>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:68>
 		CardDataLoader_t95621B2DD026AA7CCD00D1204BE59F25F33A13CE* L_1 = __this->___dataLoader;
 		String_t* L_2 = ___0_id;
 		NullCheck(L_1);
 		CharacterCardData_tBF56D8CEB59CC6C0256E7C8D4F1D57947C3986CF* L_3;
 		L_3 = CardDataLoader_GetCharacterById_m819EF072169565240D56CBE95BF8B7A4614C33E4(L_1, L_2, NULL);
 		V_0 = L_3;
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:68>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:69>
 		CharacterCardData_tBF56D8CEB59CC6C0256E7C8D4F1D57947C3986CF* L_4 = V_0;
 		if (L_4)
 		{
@@ -5881,21 +5882,21 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:68>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:69>
 		return;
 	}
 
 IL_001a:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:70>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:71>
 		CharacterCardData_tBF56D8CEB59CC6C0256E7C8D4F1D57947C3986CF* L_5 = V_0;
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_6 = (BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7*)il2cpp_codegen_object_new(BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7_il2cpp_TypeInfo_var);
 		BattleCharacter__ctor_m1365351B91C0F6AE58866E0548E1E72BCC92C379(L_6, L_5, NULL);
 		__this->___player2 = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___player2), (void*)L_6);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:71>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:72>
 		BattleManager_set_Player2Set_mC8E2C53F0D239FC0D7C98939F0B0FC14032267A4_inline(__this, (bool)1, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:73>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:74>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = __this->___player2Prefab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_8;
@@ -5906,7 +5907,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:74>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:75>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = __this->___player2Prefab;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___1_pos;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_11 = ___2_rot;
@@ -5919,11 +5920,11 @@ IL_001a:
 
 IL_004e:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:76>
-		BattleManager_UpdateUI_m05A84DB18F9D0E75CAE305727C71BA45024E22A7(__this, _stringLiteral00370F03536EA05793C508EE35384F7A888F3BDE, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:77>
-		BattleManager_UpdateHpUI_mA24309773924E48DCC1821A34589D9E9C303E7E8(__this, NULL);
+		BattleManager_UpdateUI_m05A84DB18F9D0E75CAE305727C71BA45024E22A7(__this, _stringLiteral00370F03536EA05793C508EE35384F7A888F3BDE, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:78>
+		BattleManager_UpdateHpUI_mA24309773924E48DCC1821A34589D9E9C303E7E8(__this, NULL);
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:79>
 		return;
 	}
 }
@@ -5938,7 +5939,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_Player1UseAttack_m481586D4
 	}
 	AttackCardData_t30733DD5F8DDF43A2C4BD8AD8022545C7BB532C6* V_0 = NULL;
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:85>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:86>
 		bool L_0;
 		L_0 = BattleManager_CanAct_m7B7335F08BFD91182712A3CA82C2F741FE049818(__this, (bool)1, NULL);
 		if (L_0)
@@ -5947,20 +5948,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_Player1UseAttack_m481586D4
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:85>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:86>
 		return;
 	}
 
 IL_000a:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:87>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:88>
 		CardDataLoader_t95621B2DD026AA7CCD00D1204BE59F25F33A13CE* L_1 = __this->___dataLoader;
 		String_t* L_2 = ___0_key;
 		NullCheck(L_1);
 		AttackCardData_t30733DD5F8DDF43A2C4BD8AD8022545C7BB532C6* L_3;
 		L_3 = CardDataLoader_GetAttackById_mE4821B23EE53638E8CC5826DBF9F2223D127A5DF(L_1, L_2, NULL);
 		V_0 = L_3;
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:88>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:89>
 		AttackCardData_t30733DD5F8DDF43A2C4BD8AD8022545C7BB532C6* L_4 = V_0;
 		if (L_4)
 		{
@@ -5968,29 +5969,29 @@ IL_000a:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:88>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:89>
 		return;
 	}
 
 IL_001b:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:90>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:91>
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_5 = __this->___player1;
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_6 = __this->___player2;
 		AttackCardData_t30733DD5F8DDF43A2C4BD8AD8022545C7BB532C6* L_7 = V_0;
 		BattleManager_DoAttack_m97B776450DFF4B882B65560396496DF3BBB0D783(__this, L_5, L_6, L_7, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:91>
-		BattleManager_set_Player1Acted_mAF90DC8CC998A06018919E01DE4642A9B5F2180B_inline(__this, (bool)1, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:92>
+		BattleManager_set_Player1Acted_mAF90DC8CC998A06018919E01DE4642A9B5F2180B_inline(__this, (bool)1, NULL);
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:93>
 		AttackCardData_t30733DD5F8DDF43A2C4BD8AD8022545C7BB532C6* L_8 = V_0;
 		NullCheck(L_8);
 		String_t* L_9 = L_8->___name;
 		String_t* L_10;
 		L_10 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralE1DDA3F7348CC16E0724382F6800C394040B2600, L_9, NULL);
 		BattleManager_UpdateUI_m05A84DB18F9D0E75CAE305727C71BA45024E22A7(__this, L_10, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:93>
-		BattleManager_CheckEndOfTurn_m7AC1D45A323A0FA47B11F040AFAF713897E9BBF0(__this, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:94>
+		BattleManager_CheckEndOfTurn_m7AC1D45A323A0FA47B11F040AFAF713897E9BBF0(__this, NULL);
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:95>
 		return;
 	}
 }
@@ -6005,7 +6006,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_Player2UseAttack_m474F1095
 	}
 	AttackCardData_t30733DD5F8DDF43A2C4BD8AD8022545C7BB532C6* V_0 = NULL;
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:98>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:99>
 		bool L_0;
 		L_0 = BattleManager_CanAct_m7B7335F08BFD91182712A3CA82C2F741FE049818(__this, (bool)0, NULL);
 		if (L_0)
@@ -6014,20 +6015,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_Player2UseAttack_m474F1095
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:98>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:99>
 		return;
 	}
 
 IL_000a:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:100>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:101>
 		CardDataLoader_t95621B2DD026AA7CCD00D1204BE59F25F33A13CE* L_1 = __this->___dataLoader;
 		String_t* L_2 = ___0_key;
 		NullCheck(L_1);
 		AttackCardData_t30733DD5F8DDF43A2C4BD8AD8022545C7BB532C6* L_3;
 		L_3 = CardDataLoader_GetAttackById_mE4821B23EE53638E8CC5826DBF9F2223D127A5DF(L_1, L_2, NULL);
 		V_0 = L_3;
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:101>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:102>
 		AttackCardData_t30733DD5F8DDF43A2C4BD8AD8022545C7BB532C6* L_4 = V_0;
 		if (L_4)
 		{
@@ -6035,29 +6036,29 @@ IL_000a:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:101>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:102>
 		return;
 	}
 
 IL_001b:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:103>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:104>
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_5 = __this->___player2;
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_6 = __this->___player1;
 		AttackCardData_t30733DD5F8DDF43A2C4BD8AD8022545C7BB532C6* L_7 = V_0;
 		BattleManager_DoAttack_m97B776450DFF4B882B65560396496DF3BBB0D783(__this, L_5, L_6, L_7, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:104>
-		BattleManager_set_Player2Acted_m910F399C1D09AFD62324C4C9D84D4E8E7D8A9377_inline(__this, (bool)1, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:105>
+		BattleManager_set_Player2Acted_m910F399C1D09AFD62324C4C9D84D4E8E7D8A9377_inline(__this, (bool)1, NULL);
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:106>
 		AttackCardData_t30733DD5F8DDF43A2C4BD8AD8022545C7BB532C6* L_8 = V_0;
 		NullCheck(L_8);
 		String_t* L_9 = L_8->___name;
 		String_t* L_10;
 		L_10 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralF6AC3118A8E65BE59C76E06CFDE56C7C1C075B64, L_9, NULL);
 		BattleManager_UpdateUI_m05A84DB18F9D0E75CAE305727C71BA45024E22A7(__this, L_10, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:106>
-		BattleManager_CheckEndOfTurn_m7AC1D45A323A0FA47B11F040AFAF713897E9BBF0(__this, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:107>
+		BattleManager_CheckEndOfTurn_m7AC1D45A323A0FA47B11F040AFAF713897E9BBF0(__this, NULL);
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:108>
 		return;
 	}
 }
@@ -6072,7 +6073,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_Player1UseBuff_m18B177F996
 	}
 	BuffCardData_t3817AD11EA760F15AA68E2672EE9E12B51D1760F* V_0 = NULL;
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:114>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:115>
 		bool L_0;
 		L_0 = BattleManager_CanAct_m7B7335F08BFD91182712A3CA82C2F741FE049818(__this, (bool)1, NULL);
 		if (L_0)
@@ -6081,20 +6082,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_Player1UseBuff_m18B177F996
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:114>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:115>
 		return;
 	}
 
 IL_000a:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:116>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:117>
 		CardDataLoader_t95621B2DD026AA7CCD00D1204BE59F25F33A13CE* L_1 = __this->___dataLoader;
 		String_t* L_2 = ___0_key;
 		NullCheck(L_1);
 		BuffCardData_t3817AD11EA760F15AA68E2672EE9E12B51D1760F* L_3;
 		L_3 = CardDataLoader_GetBuffById_mD33178980A8F81A30BAE9D78DE86A6C717A18F94(L_1, L_2, NULL);
 		V_0 = L_3;
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:117>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:118>
 		BuffCardData_t3817AD11EA760F15AA68E2672EE9E12B51D1760F* L_4 = V_0;
 		if (L_4)
 		{
@@ -6102,28 +6103,28 @@ IL_000a:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:117>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:118>
 		return;
 	}
 
 IL_001b:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:119>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:120>
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_5 = __this->___player1;
 		BuffCardData_t3817AD11EA760F15AA68E2672EE9E12B51D1760F* L_6 = V_0;
 		BattleManager_ApplyBuff_m372FE21D87170B95D1769B8538F23B188EDEE120(__this, L_5, L_6, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:120>
-		BattleManager_set_Player1Acted_mAF90DC8CC998A06018919E01DE4642A9B5F2180B_inline(__this, (bool)1, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:121>
+		BattleManager_set_Player1Acted_mAF90DC8CC998A06018919E01DE4642A9B5F2180B_inline(__this, (bool)1, NULL);
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:122>
 		BuffCardData_t3817AD11EA760F15AA68E2672EE9E12B51D1760F* L_7 = V_0;
 		NullCheck(L_7);
 		String_t* L_8 = L_7->___name;
 		String_t* L_9;
 		L_9 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralF6C2051DB4DF6DA13363363A053E4EB129AE918D, L_8, NULL);
 		BattleManager_UpdateUI_m05A84DB18F9D0E75CAE305727C71BA45024E22A7(__this, L_9, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:122>
-		BattleManager_CheckEndOfTurn_m7AC1D45A323A0FA47B11F040AFAF713897E9BBF0(__this, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:123>
+		BattleManager_CheckEndOfTurn_m7AC1D45A323A0FA47B11F040AFAF713897E9BBF0(__this, NULL);
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:124>
 		return;
 	}
 }
@@ -6138,7 +6139,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_Player2UseBuff_m683507BBA2
 	}
 	BuffCardData_t3817AD11EA760F15AA68E2672EE9E12B51D1760F* V_0 = NULL;
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:127>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:128>
 		bool L_0;
 		L_0 = BattleManager_CanAct_m7B7335F08BFD91182712A3CA82C2F741FE049818(__this, (bool)0, NULL);
 		if (L_0)
@@ -6147,20 +6148,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_Player2UseBuff_m683507BBA2
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:127>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:128>
 		return;
 	}
 
 IL_000a:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:129>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:130>
 		CardDataLoader_t95621B2DD026AA7CCD00D1204BE59F25F33A13CE* L_1 = __this->___dataLoader;
 		String_t* L_2 = ___0_key;
 		NullCheck(L_1);
 		BuffCardData_t3817AD11EA760F15AA68E2672EE9E12B51D1760F* L_3;
 		L_3 = CardDataLoader_GetBuffById_mD33178980A8F81A30BAE9D78DE86A6C717A18F94(L_1, L_2, NULL);
 		V_0 = L_3;
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:130>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:131>
 		BuffCardData_t3817AD11EA760F15AA68E2672EE9E12B51D1760F* L_4 = V_0;
 		if (L_4)
 		{
@@ -6168,28 +6169,28 @@ IL_000a:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:130>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:131>
 		return;
 	}
 
 IL_001b:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:132>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:133>
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_5 = __this->___player2;
 		BuffCardData_t3817AD11EA760F15AA68E2672EE9E12B51D1760F* L_6 = V_0;
 		BattleManager_ApplyBuff_m372FE21D87170B95D1769B8538F23B188EDEE120(__this, L_5, L_6, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:133>
-		BattleManager_set_Player2Acted_m910F399C1D09AFD62324C4C9D84D4E8E7D8A9377_inline(__this, (bool)1, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:134>
+		BattleManager_set_Player2Acted_m910F399C1D09AFD62324C4C9D84D4E8E7D8A9377_inline(__this, (bool)1, NULL);
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:135>
 		BuffCardData_t3817AD11EA760F15AA68E2672EE9E12B51D1760F* L_7 = V_0;
 		NullCheck(L_7);
 		String_t* L_8 = L_7->___name;
 		String_t* L_9;
 		L_9 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral818C8BCEF170473902AD3B5EF0BBDE9B7A26283D, L_8, NULL);
 		BattleManager_UpdateUI_m05A84DB18F9D0E75CAE305727C71BA45024E22A7(__this, L_9, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:135>
-		BattleManager_CheckEndOfTurn_m7AC1D45A323A0FA47B11F040AFAF713897E9BBF0(__this, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:136>
+		BattleManager_CheckEndOfTurn_m7AC1D45A323A0FA47B11F040AFAF713897E9BBF0(__this, NULL);
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:137>
 		return;
 	}
 }
@@ -6204,7 +6205,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BattleManager_CanAct_m7B7335F08BFD911827
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:146>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:147>
 		bool L_0 = __this->___isBattleOver;
 		if (!L_0)
 		{
@@ -6212,16 +6213,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BattleManager_CanAct_m7B7335F08BFD911827
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:148>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:149>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral4A6EED7812569B9D1D9053D06A60CD221A183D54, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:149>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:150>
 		return (bool)0;
 	}
 
 IL_0014:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:152>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:153>
 		bool L_1;
 		L_1 = BattleManager_get_Player1Set_m64F3C2A173E0FE05B74B19E8D1A7A04E05B70728_inline(__this, NULL);
 		if (!L_1)
@@ -6240,13 +6241,13 @@ IL_0014:
 
 IL_0024:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:155>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:156>
 		return (bool)0;
 	}
 
 IL_0026:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:158>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:159>
 		bool L_3 = ___0_isPlayer1;
 		if (!L_3)
 		{
@@ -6262,13 +6263,13 @@ IL_0026:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:158>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:159>
 		return (bool)0;
 	}
 
 IL_0033:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:159>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:160>
 		bool L_5 = ___0_isPlayer1;
 		if (L_5)
 		{
@@ -6284,13 +6285,13 @@ IL_0033:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:159>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:160>
 		return (bool)0;
 	}
 
 IL_0040:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:161>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:162>
 		return (bool)1;
 	}
 }
@@ -6320,7 +6321,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_DoAttack_m97B776450DFF4B88
 	String_t* V_3 = NULL;
 	String_t* G_B9_0 = NULL;
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:170>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:171>
 		AttackCardData_t30733DD5F8DDF43A2C4BD8AD8022545C7BB532C6* L_0 = ___2_atk;
 		NullCheck(L_0);
 		String_t* L_1 = L_0->___attribute;
@@ -6332,17 +6333,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_DoAttack_m97B776450DFF4B88
 		float L_5;
 		L_5 = BattleManager_GetAttributeMultiplier_m62985D5004A91D4627F720433DD99EBB1F8942E8(__this, L_1, L_4, NULL);
 		V_0 = L_5;
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:174>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:175>
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_6 = ___0_attacker;
 		NullCheck(L_6);
 		int32_t L_7 = L_6->___currentAttack;
 		AttackCardData_t30733DD5F8DDF43A2C4BD8AD8022545C7BB532C6* L_8 = ___2_atk;
 		NullCheck(L_8);
 		float L_9 = L_8->___attack_rate;
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:177>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:178>
 		float L_10 = V_0;
 		V_1 = ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(((float)L_7), L_9)), L_10));
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:181>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:182>
 		float L_11 = V_1;
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_12 = ___1_defender;
 		NullCheck(L_12);
@@ -6352,7 +6353,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_DoAttack_m97B776450DFF4B88
 		int32_t L_15;
 		L_15 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, L_14, NULL);
 		V_2 = L_15;
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:184>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:185>
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_16 = ___1_defender;
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_17 = L_16;
 		NullCheck(L_17);
@@ -6360,9 +6361,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_DoAttack_m97B776450DFF4B88
 		int32_t L_19 = V_2;
 		NullCheck(L_17);
 		L_17->___currentHp = ((int32_t)il2cpp_codegen_subtract(L_18, L_19));
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:185>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:186>
 		BattleManager_UpdateHpUI_mA24309773924E48DCC1821A34589D9E9C303E7E8(__this, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:188>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:189>
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_20 = ___1_defender;
 		NullCheck(L_20);
 		int32_t L_21 = L_20->___currentHp;
@@ -6372,13 +6373,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_DoAttack_m97B776450DFF4B88
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:191>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:192>
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_22 = ___1_defender;
 		NullCheck(L_22);
 		L_22->___currentHp = 0;
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:192>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:193>
 		BattleManager_UpdateHpUI_mA24309773924E48DCC1821A34589D9E9C303E7E8(__this, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:195>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:196>
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_23 = ___0_attacker;
 		NullCheck(L_23);
 		CharacterCardData_tBF56D8CEB59CC6C0256E7C8D4F1D57947C3986CF* L_24 = L_23->___data;
@@ -6390,7 +6391,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_DoAttack_m97B776450DFF4B88
 
 IL_007b:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:200>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:201>
 		float L_26 = V_0;
 		if ((!(((float)L_26) > ((float)(1.0f)))))
 		{
@@ -6398,7 +6399,7 @@ IL_007b:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:201>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:202>
 		int32_t L_27 = V_2;
 		int32_t L_28 = L_27;
 		RuntimeObject* L_29 = Box(il2cpp_defaults.int32_class, &L_28);
@@ -6410,7 +6411,7 @@ IL_007b:
 
 IL_009b:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:204>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:205>
 		int32_t L_31 = V_2;
 		int32_t L_32 = L_31;
 		RuntimeObject* L_33 = Box(il2cpp_defaults.int32_class, &L_32);
@@ -6421,13 +6422,13 @@ IL_009b:
 
 IL_00b1:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:208>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:209>
 		BattleManager_CheckEndOfTurn_m7AC1D45A323A0FA47B11F040AFAF713897E9BBF0(__this, NULL);
 	}
 
 IL_00b7:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:212>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:213>
 		float L_35 = V_0;
 		if ((((float)L_35) > ((float)(1.0f))))
 		{
@@ -6447,8 +6448,8 @@ IL_00c6:
 IL_00cb:
 	{
 		V_3 = G_B9_0;
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:213>
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:214>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:215>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_36 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)((int32_t)10));
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_37 = L_36;
 		NullCheck(L_37);
@@ -6509,7 +6510,7 @@ IL_00cb:
 		L_65 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_56, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_65, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:216>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:217>
 		float L_66 = V_0;
 		if ((!(((float)L_66) > ((float)(1.0f)))))
 		{
@@ -6517,7 +6518,7 @@ IL_00cb:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:216>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:217>
 		int32_t L_67 = V_2;
 		int32_t L_68 = L_67;
 		RuntimeObject* L_69 = Box(il2cpp_defaults.int32_class, &L_68);
@@ -6528,7 +6529,7 @@ IL_00cb:
 
 IL_016c:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:217>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:218>
 		return;
 	}
 }
@@ -6544,7 +6545,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float BattleManager_GetAttributeMultiplier_m6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:223>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:224>
 		String_t* L_0 = ___0_attackAttr;
 		bool L_1;
 		L_1 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_0, _stringLiteral491808D7EEB006360E8FF7C51AA2757B43D35E12, NULL);
@@ -6563,13 +6564,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float BattleManager_GetAttributeMultiplier_m6
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:223>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:224>
 		return (2.0f);
 	}
 
 IL_0020:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:224>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:225>
 		String_t* L_4 = ___0_attackAttr;
 		bool L_5;
 		L_5 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_4, _stringLiteral6A02AF6DAF51671003CF2CEFC8FD591C5314BA7C, NULL);
@@ -6588,13 +6589,13 @@ IL_0020:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:224>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:225>
 		return (2.0f);
 	}
 
 IL_0040:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:225>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:226>
 		String_t* L_8 = ___0_attackAttr;
 		bool L_9;
 		L_9 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_8, _stringLiteral42068B0B535BEE0AD0CBD0E4D92D9B191EDBB05B, NULL);
@@ -6613,13 +6614,13 @@ IL_0040:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:225>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:226>
 		return (2.0f);
 	}
 
 IL_0060:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:228>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:229>
 		return (1.0f);
 	}
 }
@@ -6627,7 +6628,7 @@ IL_0060:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_ApplyBuff_m372FE21D87170B95D1769B8538F23B188EDEE120 (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* ___0_target, BuffCardData_t3817AD11EA760F15AA68E2672EE9E12B51D1760F* ___1_buff, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:233>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:234>
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_0 = ___0_target;
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_1 = L_0;
 		NullCheck(L_1);
@@ -6637,7 +6638,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_ApplyBuff_m372FE21D87170B9
 		int32_t L_4 = L_3->___add_attack;
 		NullCheck(L_1);
 		L_1->___currentAttack = ((int32_t)il2cpp_codegen_add(L_2, L_4));
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:234>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:235>
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_5 = ___0_target;
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_6 = L_5;
 		NullCheck(L_6);
@@ -6647,7 +6648,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_ApplyBuff_m372FE21D87170B9
 		int32_t L_9 = L_8->___add_defense;
 		NullCheck(L_6);
 		L_6->___currentDefense = ((int32_t)il2cpp_codegen_add(L_7, L_9));
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:235>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:236>
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_10 = ___0_target;
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_11 = L_10;
 		NullCheck(L_11);
@@ -6657,9 +6658,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_ApplyBuff_m372FE21D87170B9
 		int32_t L_14 = L_13->___add_HP;
 		NullCheck(L_11);
 		L_11->___currentHp = ((int32_t)il2cpp_codegen_add(L_12, L_14));
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:236>
-		BattleManager_UpdateHpUI_mA24309773924E48DCC1821A34589D9E9C303E7E8(__this, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:237>
+		BattleManager_UpdateHpUI_mA24309773924E48DCC1821A34589D9E9C303E7E8(__this, NULL);
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:238>
 		return;
 	}
 }
@@ -6674,7 +6675,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_UpdateHpUI_mA24309773924E4
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:241>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:242>
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_0 = __this->___player1;
 		if (!L_0)
 		{
@@ -6682,7 +6683,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_UpdateHpUI_mA24309773924E4
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:241>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:242>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_1 = __this->___player1HpText;
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_2 = __this->___player1;
 		NullCheck(L_2);
@@ -6697,7 +6698,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_UpdateHpUI_mA24309773924E4
 
 IL_002d:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:242>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:243>
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_7 = __this->___player2;
 		if (!L_7)
 		{
@@ -6705,7 +6706,7 @@ IL_002d:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:242>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:243>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_8 = __this->___player2HpText;
 		BattleCharacter_tDF366B26F19C11B8345895959C8A4514132263B7* L_9 = __this->___player2;
 		NullCheck(L_9);
@@ -6720,7 +6721,7 @@ IL_002d:
 
 IL_005a:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:243>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:244>
 		return;
 	}
 }
@@ -6735,7 +6736,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_UpdateUI_m05A84DB18F9D0E75
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:247>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:248>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___infoText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6746,7 +6747,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_UpdateUI_m05A84DB18F9D0E75
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:247>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:248>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_2 = __this->___infoText;
 		String_t* L_3 = ___0_msg;
 		NullCheck(L_2);
@@ -6755,11 +6756,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_UpdateUI_m05A84DB18F9D0E75
 
 IL_001a:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:248>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:249>
 		String_t* L_4 = ___0_msg;
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_4, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:249>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:250>
 		return;
 	}
 }
@@ -6774,7 +6775,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_CheckEndOfTurn_m7AC1D45A32
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:254>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:255>
 		bool L_0 = __this->___isBattleOver;
 		if (!L_0)
 		{
@@ -6782,13 +6783,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_CheckEndOfTurn_m7AC1D45A32
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:254>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:255>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:256>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:257>
 		bool L_1;
 		L_1 = BattleManager_get_Player1Acted_m663BE3406CE232D7579CD60BBEE2513CE0C0F7D9_inline(__this, NULL);
 		if (!L_1)
@@ -6805,21 +6806,21 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:259>
-		BattleManager_set_Player1Acted_mAF90DC8CC998A06018919E01DE4642A9B5F2180B_inline(__this, (bool)0, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:260>
-		BattleManager_set_Player2Acted_m910F399C1D09AFD62324C4C9D84D4E8E7D8A9377_inline(__this, (bool)0, NULL);
+		BattleManager_set_Player1Acted_mAF90DC8CC998A06018919E01DE4642A9B5F2180B_inline(__this, (bool)0, NULL);
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:261>
+		BattleManager_set_Player2Acted_m910F399C1D09AFD62324C4C9D84D4E8E7D8A9377_inline(__this, (bool)0, NULL);
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:262>
 		int32_t L_3 = __this->___turnNumber;
 		__this->___turnNumber = ((int32_t)il2cpp_codegen_add(L_3, 1));
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:263>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:264>
 		int32_t L_4 = __this->___turnNumber;
 		int32_t L_5 = L_4;
 		RuntimeObject* L_6 = Box(il2cpp_defaults.int32_class, &L_5);
 		String_t* L_7;
 		L_7 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralC34CF2B97BBA889D0E3095DE80C0B645CCE44BA3, L_6, NULL);
 		BattleManager_UpdateUI_m05A84DB18F9D0E75CAE305727C71BA45024E22A7(__this, L_7, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:266>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:267>
 		ARCardInput_tC7D9C2EBA757CD91EA0FE02851CB943958473EF8* L_8 = __this->___arCardInput;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -6830,7 +6831,7 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:268>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:269>
 		ARCardInput_tC7D9C2EBA757CD91EA0FE02851CB943958473EF8* L_10 = __this->___arCardInput;
 		NullCheck(L_10);
 		ARCardInput_ResetActionFlag_m8073A1ADC6823F620CAC79C72030E81C4BFEC2B0(L_10, NULL);
@@ -6838,7 +6839,7 @@ IL_0009:
 
 IL_0069:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:272>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:273>
 		return;
 	}
 }
@@ -6849,6 +6850,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_EndBattle_m9D062D437C3E280
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral216451B0B96E95A72109CC42B6C5D525882C74B8);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4EF1108B0C57BACF82F4BED365BA2083CC5BB0F5);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral84463F47889FB4947893A486467BDB1EB222C2CF);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralAF016F06E2781D8D9CA77C6F24F9164599507288);
@@ -6858,11 +6861,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_EndBattle_m9D062D437C3E280
 	}
 	String_t* V_0 = NULL;
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:277>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:278>
 		__this->___isBattleOver = (bool)1;
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:279>
-		V_0 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:280>
+		V_0 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:281>
 		String_t* L_0 = ___0_winnerName;
 		bool L_1;
 		L_1 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_0, _stringLiteral4EF1108B0C57BACF82F4BED365BA2083CC5BB0F5, NULL);
@@ -6872,29 +6875,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_EndBattle_m9D062D437C3E280
 		}
 	}
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:282>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:283>
 		V_0 = _stringLiteralFD59C16795C06EEFD3EF1F6B23DF323A039D193C;
 		goto IL_0028;
 	}
 
 IL_0022:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:286>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:287>
 		V_0 = _stringLiteralAF016F06E2781D8D9CA77C6F24F9164599507288;
 	}
 
 IL_0028:
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:289>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:290>
 		String_t* L_2 = V_0;
 		BattleManager_UpdateUI_m05A84DB18F9D0E75CAE305727C71BA45024E22A7(__this, L_2, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:290>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:291>
 		String_t* L_3 = ___0_winnerName;
 		String_t* L_4;
 		L_4 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral84463F47889FB4947893A486467BDB1EB222C2CF, L_3, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_4, NULL);
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:291>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:292>
+		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(_stringLiteral216451B0B96E95A72109CC42B6C5D525882C74B8, NULL);
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:293>
 		return;
 	}
 }
@@ -6902,7 +6908,7 @@ IL_0028:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager__ctor_m9226C70BB009FB9892694CDB9710F5C8955881BC (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:35>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:36>
 		__this->___turnNumber = 1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -11473,7 +11479,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tFA730335FF46512E4245B2F46
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool BattleManager_get_Player1Set_m64F3C2A173E0FE05B74B19E8D1A7A04E05B70728_inline (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:28>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:29>
 		bool L_0 = __this->___U3CPlayer1SetU3Ek__BackingField;
 		return L_0;
 	}
@@ -11482,7 +11488,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool BattleManager_get_Player1Set
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool BattleManager_get_Player2Set_mF51D491D96CE597C73E52659260482E1E7A9EBE1_inline (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:29>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:30>
 		bool L_0 = __this->___U3CPlayer2SetU3Ek__BackingField;
 		return L_0;
 	}
@@ -11491,7 +11497,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool BattleManager_get_Player2Set
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool BattleManager_get_Player1Acted_m663BE3406CE232D7579CD60BBEE2513CE0C0F7D9_inline (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:30>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:31>
 		bool L_0 = __this->___U3CPlayer1ActedU3Ek__BackingField;
 		return L_0;
 	}
@@ -11500,7 +11506,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool BattleManager_get_Player1Act
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool BattleManager_get_Player2Acted_mD4FC7E05B39F0D4D407EE889761B4B928A2C068F_inline (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:31>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:32>
 		bool L_0 = __this->___U3CPlayer2ActedU3Ek__BackingField;
 		return L_0;
 	}
@@ -11509,7 +11515,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool BattleManager_get_Player2Act
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BattleManager_set_Player1Set_mFECFEE78544765C8E987EE0007CE6F0B6DB8FD70_inline (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:28>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:29>
 		bool L_0 = ___0_value;
 		__this->___U3CPlayer1SetU3Ek__BackingField = L_0;
 		return;
@@ -11519,7 +11525,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BattleManager_set_Player1Set
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BattleManager_set_Player2Set_mC8E2C53F0D239FC0D7C98939F0B0FC14032267A4_inline (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:29>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:30>
 		bool L_0 = ___0_value;
 		__this->___U3CPlayer2SetU3Ek__BackingField = L_0;
 		return;
@@ -11529,7 +11535,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BattleManager_set_Player2Set
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BattleManager_set_Player1Acted_mAF90DC8CC998A06018919E01DE4642A9B5F2180B_inline (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:30>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:31>
 		bool L_0 = ___0_value;
 		__this->___U3CPlayer1ActedU3Ek__BackingField = L_0;
 		return;
@@ -11539,7 +11545,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BattleManager_set_Player1Act
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BattleManager_set_Player2Acted_m910F399C1D09AFD62324C4C9D84D4E8E7D8A9377_inline (BattleManager_t06A61FE1F2CFFA65BCA83410F329CC107AA36611* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:31>
+		//<source_info:C:/Unity_works/unity_project_it/Assets/Scripts/BattleManager.cs:32>
 		bool L_0 = ___0_value;
 		__this->___U3CPlayer2ActedU3Ek__BackingField = L_0;
 		return;

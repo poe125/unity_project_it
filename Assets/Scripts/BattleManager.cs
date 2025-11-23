@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class BattleManager : MonoBehaviour
 {
@@ -288,5 +289,6 @@ public class BattleManager : MonoBehaviour
 
         UpdateUI(winMsg);
         Debug.Log($"GameSet: Winner {winnerName}");
+        SceneManager.LoadScene("GameOverScene");
     }
 }

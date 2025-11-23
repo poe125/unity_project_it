@@ -273,7 +273,8 @@
           {
             "name": "Mesh",
             "scenes": [
-              "Assets/Scenes/ARGame.unity"
+              "Assets/Scenes/ARGame.unity",
+              "Assets/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -281,7 +282,8 @@
           {
             "name": "MeshFilter",
             "scenes": [
-              "Assets/Scenes/ARGame.unity"
+              "Assets/Scenes/ARGame.unity",
+              "Assets/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -289,7 +291,8 @@
           {
             "name": "MeshRenderer",
             "scenes": [
-              "Assets/Scenes/ARGame.unity"
+              "Assets/Scenes/ARGame.unity",
+              "Assets/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -446,7 +449,6 @@
           {
             "name": "Sprite",
             "scenes": [
-              "Assets/Scenes/ARGame.unity",
               "Assets/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
@@ -941,7 +943,8 @@
           {
             "name": "BoxCollider",
             "scenes": [
-              "Assets/Scenes/ARGame.unity"
+              "Assets/Scenes/ARGame.unity",
+              "Assets/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1353,7 +1356,8 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/Scenes/ARGame.unity"
+              "Assets/Scenes/ARGame.unity",
+              "Assets/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
             "icon": null

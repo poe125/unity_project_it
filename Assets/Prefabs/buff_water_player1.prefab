@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6433233724961331755}
   - component: {fileID: 7763925892122122858}
   m_Layer: 0
-  m_Name: buff_water_player2
+  m_Name: buff_water_player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

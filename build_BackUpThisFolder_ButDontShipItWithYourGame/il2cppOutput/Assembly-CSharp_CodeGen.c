@@ -44,8 +44,14 @@ extern void BattleManager_ApplyBuff_m372FE21D87170B95D1769B8538F23B188EDEE120 (v
 extern void BattleManager_UpdateHpUI_mA24309773924E48DCC1821A34589D9E9C303E7E8 (void);
 extern void BattleManager_UpdateUI_m05A84DB18F9D0E75CAE305727C71BA45024E22A7 (void);
 extern void BattleManager_CheckEndOfTurn_m7AC1D45A323A0FA47B11F040AFAF713897E9BBF0 (void);
-extern void BattleManager_EndBattle_m9D062D437C3E2804067DD14184D803109C537FF3 (void);
+extern void BattleManager_EndBattle_mD0095B5AE95A40CBA6E5E32B4601BB4F047C162B (void);
 extern void BattleManager__ctor_m9226C70BB009FB9892694CDB9710F5C8955881BC (void);
+extern void U3CEndBattleU3Ed__43__ctor_m2087791480D1A6094FBC2B1B82C680F3A6548F39 (void);
+extern void U3CEndBattleU3Ed__43_System_IDisposable_Dispose_m33290A5649B5B695C8D1BEEC0B9B77F065A30540 (void);
+extern void U3CEndBattleU3Ed__43_MoveNext_m45B76DA9347F4247F2E23E1BF2B037C7FECD1FA5 (void);
+extern void U3CEndBattleU3Ed__43_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2293BCA048DCFDAB220FF9A8D4338B75E43BA24A (void);
+extern void U3CEndBattleU3Ed__43_System_Collections_IEnumerator_Reset_mD77444BB25F3E12CE1CE3E0231D3AD41D468E947 (void);
+extern void U3CEndBattleU3Ed__43_System_Collections_IEnumerator_get_Current_mAA6B8FD87F1F09F059EA75961B23DE810467AABC (void);
 extern void CharacterCardData__ctor_mA766F16B8E18D8A9168005C177C92434BF67A77C (void);
 extern void AttackCardData__ctor_m334DEC67EBFD55792B685F91BBAEF41E552B3289 (void);
 extern void BuffCardData__ctor_mAFBBBB5A60A2338DE3B3514BF376E0E4D8216C3A (void);
@@ -56,6 +62,8 @@ extern void CardDataLoader_GetCharacterById_m819EF072169565240D56CBE95BF8B7A4614
 extern void CardDataLoader_GetAttackById_mE4821B23EE53638E8CC5826DBF9F2223D127A5DF (void);
 extern void CardDataLoader_GetBuffById_mD33178980A8F81A30BAE9D78DE86A6C717A18F94 (void);
 extern void CardDataLoader__ctor_mEB3E47AEBB7E34E514BEE7136BAC3DCAFCF85850 (void);
+extern void GameOverScreenManager_OnStartButtonPressed_mF5AE8CA1E82F4AD066C51D3ACF37EE1D530B7AC9 (void);
+extern void GameOverScreenManager__ctor_m742B272113B4303F3802E662E0C38D31C6390FD2 (void);
 extern void StartScreenManager_OnStartButtonPressed_m8C1F62FD6CF9D762549C3A0539993A38544B486E (void);
 extern void StartScreenManager__ctor_mDFC981BEF16F98A6CF888F05BD1B956E9C3BD474 (void);
 extern void SceneTemplate_RotateCube_Update_mAF2FB34B99E325443A80D60A7EB73DC092EAE9A6 (void);
@@ -152,7 +160,7 @@ extern void U3CWaitUntilNextCardU3Ed__36_MoveNext_mEB6BA70FAED1CFCFF4A723EA3EAB8
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDB2315FB1F67F06B37604285AD8F003E282D1607 (void);
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_Reset_m5E5CC9DFDC8C17DB423A7C7ECBCD4342A7754633 (void);
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_get_Current_mE7D77BA338B271D9E95117683B19436CFFF37229 (void);
-static Il2CppMethodPointer s_methodPointers[145] = 
+static Il2CppMethodPointer s_methodPointers[153] = 
 {
 	show_multiple_image_Start_mC12C07D06831E374BA9611321B065F0AB5C87406,
 	show_multiple_image_OnDestroy_m2C106E83F25FB83B9169DC32D99A014CA2BB977F,
@@ -191,8 +199,14 @@ static Il2CppMethodPointer s_methodPointers[145] =
 	BattleManager_UpdateHpUI_mA24309773924E48DCC1821A34589D9E9C303E7E8,
 	BattleManager_UpdateUI_m05A84DB18F9D0E75CAE305727C71BA45024E22A7,
 	BattleManager_CheckEndOfTurn_m7AC1D45A323A0FA47B11F040AFAF713897E9BBF0,
-	BattleManager_EndBattle_m9D062D437C3E2804067DD14184D803109C537FF3,
+	BattleManager_EndBattle_mD0095B5AE95A40CBA6E5E32B4601BB4F047C162B,
 	BattleManager__ctor_m9226C70BB009FB9892694CDB9710F5C8955881BC,
+	U3CEndBattleU3Ed__43__ctor_m2087791480D1A6094FBC2B1B82C680F3A6548F39,
+	U3CEndBattleU3Ed__43_System_IDisposable_Dispose_m33290A5649B5B695C8D1BEEC0B9B77F065A30540,
+	U3CEndBattleU3Ed__43_MoveNext_m45B76DA9347F4247F2E23E1BF2B037C7FECD1FA5,
+	U3CEndBattleU3Ed__43_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2293BCA048DCFDAB220FF9A8D4338B75E43BA24A,
+	U3CEndBattleU3Ed__43_System_Collections_IEnumerator_Reset_mD77444BB25F3E12CE1CE3E0231D3AD41D468E947,
+	U3CEndBattleU3Ed__43_System_Collections_IEnumerator_get_Current_mAA6B8FD87F1F09F059EA75961B23DE810467AABC,
 	CharacterCardData__ctor_mA766F16B8E18D8A9168005C177C92434BF67A77C,
 	AttackCardData__ctor_m334DEC67EBFD55792B685F91BBAEF41E552B3289,
 	BuffCardData__ctor_mAFBBBB5A60A2338DE3B3514BF376E0E4D8216C3A,
@@ -203,6 +217,8 @@ static Il2CppMethodPointer s_methodPointers[145] =
 	CardDataLoader_GetAttackById_mE4821B23EE53638E8CC5826DBF9F2223D127A5DF,
 	CardDataLoader_GetBuffById_mD33178980A8F81A30BAE9D78DE86A6C717A18F94,
 	CardDataLoader__ctor_mEB3E47AEBB7E34E514BEE7136BAC3DCAFCF85850,
+	GameOverScreenManager_OnStartButtonPressed_mF5AE8CA1E82F4AD066C51D3ACF37EE1D530B7AC9,
+	GameOverScreenManager__ctor_m742B272113B4303F3802E662E0C38D31C6390FD2,
 	StartScreenManager_OnStartButtonPressed_m8C1F62FD6CF9D762549C3A0539993A38544B486E,
 	StartScreenManager__ctor_mDFC981BEF16F98A6CF888F05BD1B956E9C3BD474,
 	SceneTemplate_RotateCube_Update_mAF2FB34B99E325443A80D60A7EB73DC092EAE9A6,
@@ -303,9 +319,9 @@ static Il2CppMethodPointer s_methodPointers[145] =
 extern void Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] = 
 {
-	{ 0x06000076, Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk },
+	{ 0x0600007E, Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[145] = 
+static const int32_t s_InvokerIndices[153] = 
 {
 	15301,
 	15301,
@@ -344,8 +360,14 @@ static const int32_t s_InvokerIndices[145] =
 	15301,
 	11617,
 	15301,
-	11617,
+	9955,
 	15301,
+	11552,
+	15301,
+	14910,
+	15106,
+	15301,
+	15106,
 	15301,
 	15301,
 	15301,
@@ -355,6 +377,8 @@ static const int32_t s_InvokerIndices[145] =
 	9955,
 	9955,
 	9955,
+	15301,
+	15301,
 	15301,
 	15301,
 	15301,
@@ -457,7 +481,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	145,
+	153,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,

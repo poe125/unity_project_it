@@ -301,6 +301,7 @@
             "name": "MonoBehaviour",
             "scenes": [
               "Assets/Scenes/ARGame.unity",
+              "Assets/Scenes/GameOverScene.unity",
               "Assets/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
@@ -316,6 +317,7 @@
             "name": "MonoScript",
             "scenes": [
               "Assets/Scenes/ARGame.unity",
+              "Assets/Scenes/GameOverScene.unity",
               "Assets/Scenes/StartScene.unity"
             ],
             "dependencyType": 1,
@@ -365,6 +367,7 @@
             "name": "RectTransform",
             "scenes": [
               "Assets/Scenes/ARGame.unity",
+              "Assets/Scenes/GameOverScene.unity",
               "Assets/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
@@ -449,6 +452,7 @@
           {
             "name": "Sprite",
             "scenes": [
+              "Assets/Scenes/GameOverScene.unity",
               "Assets/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
@@ -1356,7 +1360,6 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/Scenes/ARGame.unity",
               "Assets/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
@@ -1401,6 +1404,7 @@
             "name": "Canvas",
             "scenes": [
               "Assets/Scenes/ARGame.unity",
+              "Assets/Scenes/GameOverScene.unity",
               "Assets/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
@@ -1416,6 +1420,7 @@
             "name": "CanvasRenderer",
             "scenes": [
               "Assets/Scenes/ARGame.unity",
+              "Assets/Scenes/GameOverScene.unity",
               "Assets/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,

@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-
+using System.Collections;
 public class BattleManager : MonoBehaviour
 {
     [Header("参照")]
@@ -193,7 +193,7 @@ public class BattleManager : MonoBehaviour
             UpdateHpUI();
 
             // ゲーム終了処理へ (勝者は攻撃した側)
-            EndBattle(winnerName: attacker.data.owner); 
+            StartCoroutine(EndBattle(attacker.data.owner));
         }
         else
         {
@@ -235,6 +235,7 @@ public class BattleManager : MonoBehaviour
         target.currentDefense += buff.add_defense;
         target.currentHp += buff.add_HP;
         UpdateHpUI();
+        CheckEndOfTurn();
     }
 
     private void UpdateHpUI()
@@ -273,22 +274,18 @@ public class BattleManager : MonoBehaviour
     }
 
     //ゲーム終了処理
-    private void EndBattle(string winnerName)
+    private IEnumerator EndBattle(string winnerName)
     {
         isBattleOver = true;
 
-        string winMsg = "";
-        if (winnerName == "player1")
-        {
-            winMsg = "P1 WIN"; 
-        }
-        else
-        {
-            winMsg = "P2 WIN";
-        }
-
+        string winMsg = (winnerName == "player1") ? "P1 WIN" : "P2 WIN";
         UpdateUI(winMsg);
         Debug.Log($"GameSet: Winner {winnerName}");
+
+        // Wait 5 seconds
+        yield return new WaitForSeconds(5f);
+
+        // Load game over scene
         SceneManager.LoadScene("GameOverScene");
     }
 }

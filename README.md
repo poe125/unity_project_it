@@ -1,5 +1,14 @@
 # Monster Summoner
 
+To play this game, please clone this repo and open it in Unity. (version 6000.2.12f)
+Monster Summoner is a turn-based card battle game that uses AR (Augmented Reality).
+When the player scans a physical card with an Android smartphone, characters and attacks appear as 3D models in AR space, and the player can view stats such as HP and attack power.
+The game consists of the following three card types:
+- Character Cards
+- Attack Cards
+- Buff Cards (Attack Up / Defense Up / HP Recovery)
+Players combine these cards to build strategies and fight battles.
+
 ## 概要
 **Monster Summoner** は、AR（拡張現実）を用いたターン制カードバトルゲームです。  
 物理カードを Android スマートフォンで読み取ると、キャラクターや攻撃が 3D モデルとして AR 上に表示され、HP や攻撃力などのステータスを確認できます。

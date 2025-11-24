@@ -29,7 +29,7 @@
         "attack_rate":1.2,
         "attribute":"fire",
         "owner":"player1"
-        
+
     },
     {
         "id": "attack_water_player2",
@@ -39,7 +39,7 @@
         "owner":"player2"
     },
     {
-        "id": "attack_grass_marker",
+        "id": "attack_grass_player2",
         "name":"LeafCutter",
         "attack_rate":1.3,
         "attribute":"grass",
@@ -61,7 +61,7 @@
         "owner":"player2"
     },
     {
-        "id":"buff_water_marker_player1",
+        "id":"buff_water_player1",
         "name":"Heal",
         "add_HP": 20,
         "owner":"player1"
